@@ -20,4 +20,4 @@ double itc_scir(int radius);
 double itc_pow(int num, int step);
 bool itc_ispositive(int num);
 bool itc_ispositive_d(double num);
-#endif // MODULE_H_ICLUDED
+#endif // EASY_H_ICLUDED
