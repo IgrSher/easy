@@ -78,7 +78,7 @@ int itc_spr(int a, int b) {
 	return -1;
 }
 int itc_str(int a, int b, int c) {
-	if ((a > 0 && b > 0 && c > 0) && ((a <= b + c) && (b <= a + c) && (c <= a + b))) { 
+	if ((a > 0 && b > 0 && c > 0) && ((a > b + c) && (b > a + c) && (c > a + b))) { 
 		double p = (a + b + c) / 2;
 		int s = itc_sqrt(p * (p - a) * (p - b) * (p - c));
 		if (s != 0)
@@ -90,7 +90,7 @@ int itc_str(int a, int b, int c) {
 }
 double itc_scir(int radius) {
 	if (radius > 0)
-		return radius	* radius * 3.14;
+		return radius * radius * 3.14;
 	else return -1;
 }
 double itc_pow(int num, int step) {
