@@ -57,11 +57,15 @@ double itc_fmin(double num, double num2) {
 		return num2;
 }
 int itc_sqrt(int num) {
-	for (int i = 0; i * i <= num; i++) {
-		if (i * i == num)
-			return num;
+	if (num == 0)
+		return -1;
+	else {
+		for (int i = 0; i * i <= num; i++) {
+			if (i * i == num)
+				return num;
+		}
+		return -1;
 	}
-	return -1;
 }
 int itc_skv(int num) {
 	if (num > 0)
